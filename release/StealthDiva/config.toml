@@ -1,0 +1,14 @@
+enabled = true
+
+name = "StealthDiva"
+description = "Dims the PV and skips PV scene drawing to save GPU power."
+version = "1.0"
+date = "10.26.2026"
+author = "wei"
+
+dll = ["StealthDiva.dll"]
+
+# hotkey_stealth: virtual-key code, 48 = '0'. stealth_on_start: skip scene from song start.
+# hide_loading_bg: hide the song loading background image.
+settings = {default_dim = 100, behind_pv_aet = false, hotkey_stealth = 48, stealth_on_start = false, hide_loading_bg = true, pv_settings = []}
+include = ["."]
