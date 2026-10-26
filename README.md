@@ -8,7 +8,7 @@ A stealth-friendly mod for Hatsune Miku: Project DIVA Mega Mix+. Keep the rhythm
   - `-` / `=` darken or brighten the overlay, 10% per press by default (`hotkey_step`). Works in the pause menu too.
   - `default_dim` and `pv_settings` in `config.toml` set the starting level, globally or per PV.
   - At 100% dim the scene is always skipped and `0` does nothing; below 100% `0` works again.
-  - `0` toggles scene skip (it never changes the dim level): stage, movie, characters and Auth3d stop drawing, which cuts GPU load and power. Set `hotkey_stealth` (virtual-key code) or `stealth_on_start` in `config.toml`. Particles and some effects still draw.
+  - `0` toggles scene skip (it never changes the dim level): stage, movie, characters and Auth3d stop drawing, which cuts GPU load and power. Set `hotkey_stealth` (virtual-key code) in `config.toml`. The toggle state (`stealth`) and the dim level (`default_dim`) are saved automatically and restored next launch. Particles and some effects still draw.
   - `hide_loading_bg` (default true) hides the song loading background image.
 
 It is a [DIVA Mod Loader](https://github.com/blueskythlikesclouds/DivaModLoader) DLL mod and works on the current Steam build and the early 2023 build.

@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include <string.h>
 #include "scene_skip.h"
+#include "input.h"
 
 namespace scene_skip
 {
@@ -32,10 +33,13 @@ namespace scene_skip
 		if (!HotKey)
 			return;
 
-		bool down = (GetAsyncKeyState(HotKey) & 0x8000) != 0;
-		if (down && !KeyDown && !Forced)
+		if (input::Pressed(HotKey, KeyDown) && !Forced)
 			Skipping = !Skipping;
-		KeyDown = down;
+	}
+
+	bool IsSkipping()
+	{
+		return Skipping;
 	}
 
 	void SetExternalPoll(bool external)

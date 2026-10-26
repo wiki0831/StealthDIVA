@@ -10,6 +10,8 @@ namespace scene_skip
 	// NOTE: Call every frame, toggles on a key press (not while held)
 	void Poll();
 
+	bool IsSkipping();
+
 	// NOTE: Call with true when the caller runs Poll() once per frame, so the task hooks skip it
 	void SetExternalPoll(bool external);
 

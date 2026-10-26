@@ -8,7 +8,7 @@ author = "wei"
 
 dll = ["StealthDiva.dll"]
 
-# hotkey_stealth: virtual-key code, 48 = '0'. stealth_on_start: skip scene from song start.
+# hotkey_stealth: virtual-key code, 48 = '0'. default_dim and stealth are saved automatically when changed in game.
 # hide_loading_bg: hide the song loading background image.
-settings = {default_dim = 100, behind_pv_aet = false, hotkey_stealth = 48, stealth_on_start = false, hide_loading_bg = true, pv_settings = []}
+settings = {default_dim = 100, behind_pv_aet = false, hotkey_stealth = 48, stealth = false, hide_loading_bg = true, pv_settings = []}
 include = ["."]

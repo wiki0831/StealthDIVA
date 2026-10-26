@@ -15,10 +15,11 @@ namespace loading_bg
 	{
 		__try
 		{
-			for (BYTE* p = begin; p < end; p++)
+			// NOTE: memchr is vectorised, which matters because the sections are hundreds of MB
+			for (BYTE* p = begin; p < end && (p = (BYTE*)memchr(p, 'l', end - p)) != nullptr; p++)
 			{
 				// NOTE: Include the terminator so longer strings aren't matched
-				if (p[0] == 'l' && memcmp(p, Target, sizeof(Target)) == 0)
+				if (memcmp(p, Target, sizeof(Target)) == 0)
 					return p;
 			}
 		}
